@@ -1,0 +1,330 @@
+/* ============================================
+   Prism.js Custom Theme - Warm Stone
+   Matches the blog's design system
+   ============================================ */
+
+/* Light Theme Code */
+:root,
+[data-theme="light"] {
+    --code-bg: #1c1917;
+    --code-text: #e7e5e4;
+    --code-comment: #78716c;
+    --code-keyword: #f87171;
+    --code-string: #4ade80;
+    --code-function: #60a5fa;
+    --code-number: #fbbf24;
+    --code-operator: #a8a29e;
+    --code-class: #c084fc;
+    --code-variable: #fb923c;
+    --code-punctuation: #a8a29e;
+    --code-property: #22d3ee;
+    --code-regex: #f472b6;
+    --code-important: #ef4444;
+    --code-line-highlight: rgba(255, 255, 255, 0.08);
+    --code-selection: rgba(255, 255, 255, 0.15);
+}
+
+/* Dark Theme Code - Slightly adjusted for contrast */
+[data-theme="dark"] {
+    --code-bg: #0c0a09;
+    --code-text: #e7e5e4;
+    --code-comment: #78716c;
+    --code-keyword: #f87171;
+    --code-string: #4ade80;
+    --code-function: #60a5fa;
+    --code-number: #fbbf24;
+    --code-operator: #a8a29e;
+    --code-class: #c084fc;
+    --code-variable: #fb923c;
+    --code-punctuation: #a8a29e;
+    --code-property: #22d3ee;
+    --code-regex: #f472b6;
+    --code-important: #ef4444;
+    --code-line-highlight: rgba(255, 255, 255, 0.05);
+    --code-selection: rgba(255, 255, 255, 0.1);
+}
+
+/* Code Block Container */
+code[class*="language-"],
+pre[class*="language-"] {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', Monaco, monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    tab-size: 4;
+    hyphens: none;
+    color: var(--code-text);
+    background: var(--code-bg);
+}
+
+/* Selection */
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+    background: var(--code-selection);
+}
+
+/* Pre Block */
+pre[class*="language-"] {
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    overflow: auto;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+}
+
+/* Inline Code - Override for inline */
+:not(pre) > code[class*="language-"] {
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    white-space: normal;
+}
+
+/* ============================================
+   Token Styles
+   ============================================ */
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: var(--code-comment);
+    font-style: italic;
+}
+
+.token.punctuation {
+    color: var(--code-punctuation);
+}
+
+.token.namespace {
+    opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: var(--code-property);
+}
+
+.token.boolean,
+.token.number {
+    color: var(--code-number);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: var(--code-string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: var(--code-operator);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: var(--code-keyword);
+}
+
+.token.function,
+.token.class-name {
+    color: var(--code-function);
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: var(--code-variable);
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+/* ============================================
+   Language-specific adjustments
+   ============================================ */
+
+/* JavaScript */
+.language-javascript .token.keyword {
+    color: var(--code-keyword);
+}
+
+.language-javascript .token.function {
+    color: var(--code-function);
+}
+
+.language-javascript .token.class-name {
+    color: var(--code-class);
+}
+
+/* CSS */
+.language-css .token.selector {
+    color: var(--code-class);
+}
+
+.language-css .token.property {
+    color: var(--code-property);
+}
+
+/* JSON */
+.language-json .token.property {
+    color: var(--code-property);
+}
+
+.language-json .token.string {
+    color: var(--code-string);
+}
+
+/* Markdown */
+.language-markdown .token.title {
+    color: var(--code-keyword);
+    font-weight: bold;
+}
+
+.language-markdown .token.bold {
+    color: var(--code-variable);
+    font-weight: bold;
+}
+
+.language-markdown .token.italic {
+    color: var(--code-class);
+    font-style: italic;
+}
+
+/* HTML */
+.language-html .token.tag {
+    color: var(--code-keyword);
+}
+
+.language-html .token.attr-name {
+    color: var(--code-variable);
+}
+
+.language-html .token.attr-value {
+    color: var(--code-string);
+}
+
+/* ============================================
+   Line Numbers (Optional - via plugin)
+   ============================================ */
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em;
+    letter-spacing: -1px;
+    border-right: 1px solid var(--code-comment);
+    user-select: none;
+}
+
+.line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+}
+
+.line-numbers-rows > span::before {
+    content: counter(linenumber);
+    color: var(--code-comment);
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+}
+
+/* ============================================
+   Line Highlight (Optional - via plugin)
+   ============================================ */
+
+pre[data-line] {
+    position: relative;
+}
+
+.line-highlight {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: inherit 0;
+    margin-top: 1.25rem;
+    background: var(--code-line-highlight);
+    pointer-events: none;
+    line-height: inherit;
+    white-space: pre;
+}
+
+/* ============================================
+   Copy Button (if added via JS)
+   ============================================ */
+
+.code-toolbar {
+    position: relative;
+}
+
+.code-toolbar > .toolbar {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.code-toolbar:hover > .toolbar {
+    opacity: 1;
+}
+
+.code-toolbar > .toolbar > .toolbar-item > button,
+.code-toolbar > .toolbar > .toolbar-item > a,
+.code-toolbar > .toolbar > .toolbar-item > span {
+    color: var(--code-comment);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background: var(--code-bg);
+    border: 1px solid var(--code-comment);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.code-toolbar > .toolbar > .toolbar-item > button:hover,
+.code-toolbar > .toolbar > .toolbar-item > a:hover {
+    color: var(--code-text);
+    border-color: var(--code-text);
+}
+

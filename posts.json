@@ -1,0 +1,12 @@
+[
+  {
+    "file": "example.md",
+    "title": "GitHub Pages 블로그에 오신 것을 환영합니다",
+    "date": "2025-01-26",
+    "tags": ["Blog", "GitHub Pages", "Markdown"],
+    "category": "Getting Started",
+    "description": "GitHub Pages와 마크다운으로 만든 정적 블로그입니다.",
+    "excerpt": "블로그에 오신 것을 환영합니다! 이 블로그는 GitHub Pages와 순수 HTML, CSS, JavaScript로 만들어졌습니다. 별도의 빌드 도구나 프레임워크 없이 마크다운 파일만으로 게시글을 작성할 수 있습니다..."
+  }
+]
+

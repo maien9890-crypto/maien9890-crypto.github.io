@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading... | maien9890-crypto</title>
+    <meta name="description" content="">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+    
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Prism.js for code highlighting -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-symbol">◆</span>
+                    <span class="logo-text">maien9890-crypto</span>
+                </a>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                        목록으로
+                    </a>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="테마 전환">
+                        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <article class="post-article">
+                <!-- Post Header -->
+                <header class="post-header">
+                    <div id="post-category" class="post-category"></div>
+                    <h1 id="post-title" class="post-title">Loading...</h1>
+                    <div class="post-meta">
+                        <time id="post-date" class="post-date"></time>
+                        <div id="post-tags" class="post-tags"></div>
+                    </div>
+                </header>
+
+                <!-- Post Content -->
+                <div id="post-content" class="post-content">
+                    <div class="loading">
+                        <div class="loading-spinner"></div>
+                        <span>게시글을 불러오는 중...</span>
+                    </div>
+                </div>
+
+                <!-- Post Navigation -->
+                <nav id="post-nav" class="post-nav" style="display: none;">
+                    <a id="prev-post" href="#" class="post-nav-link post-nav-prev">
+                        <span class="post-nav-label">이전 글</span>
+                        <span class="post-nav-title"></span>
+                    </a>
+                    <a id="next-post" href="#" class="post-nav-link post-nav-next">
+                        <span class="post-nav-label">다음 글</span>
+                        <span class="post-nav-title"></span>
+                    </a>
+                </nav>
+            </article>
+
+            <!-- Comments (Giscus) -->
+            <section id="comments" class="comments-section">
+                <h2 class="comments-title">댓글</h2>
+                <div id="giscus-container"></div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 maien9890-crypto. All rights reserved.</p>
+            <p class="footer-powered">Powered by GitHub Pages</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/theme.js"></script>
+    <script src="js/post-loader.js"></script>
+</body>
+</html>
+
