@@ -224,9 +224,9 @@
         const script = document.createElement('script');
         script.src = 'https://giscus.app/client.js';
         script.setAttribute('data-repo', 'maien9890-crypto/maien9890-crypto.github.io');
-        script.setAttribute('data-repo-id', 'YOUR_REPO_ID'); // TODO: giscus.app에서 값 복사
+        script.setAttribute('data-repo-id', 'R_kgDOQec2Dg'); // TODO: giscus.app에서 값 복사
         script.setAttribute('data-category', 'General');
-        script.setAttribute('data-category-id', 'YOUR_CATEGORY_ID'); // TODO: giscus.app에서 값 복사
+        script.setAttribute('data-category-id', 'DIC_kwDOQec2Ds4CzIyy'); // TODO: giscus.app에서 값 복사
         script.setAttribute('data-mapping', 'pathname');
         script.setAttribute('data-strict', '0');
         script.setAttribute('data-reactions-enabled', '1');
